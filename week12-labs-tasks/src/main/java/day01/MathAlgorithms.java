@@ -1,9 +1,11 @@
 package day01;
 
-public interface MathAlgorithms {
+public class MathAlgorithms {
 
-    static int getGreatestCommonDivisor(int a, int b) {
-        for (int i = Integer.min(a, b) / 2; i > 0; i--) {
+    private MathAlgorithms() {}
+
+    public static int greatestCommonDivisor(int a, int b) {
+        for (int i = Integer.min(a, b); i > 0; i--) {
             if (a % i == 0 && b % i == 0) {
                 return i;
             }
